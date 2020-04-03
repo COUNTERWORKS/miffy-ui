@@ -1,0 +1,71 @@
+<style>
+html,
+body {
+  font-size: 16px;
+  margin: 12px;
+}
+
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  font-family: 'Lato', Hiragino Sans, sans-serif;
+  font-feature-settings: "palt";
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #414141;
+  margin: 0;
+}
+
+a {
+  color: #ff4a1a;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+a:hover {
+  color: lighten(#ff4a1a, 5%);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+input[type="radio"] {
+  appearance: radio;
+  -webkit-appearance: radio;
+}
+
+input[type="checkbox"] {
+  appearance: checkbox;
+  -webkit-appearance: checkbox;
+}
+
+input::placeholder,
+input:-ms-input-placeholder,
+input::-ms-input-placeholder,
+::-webkit-input-placeholder {
+  color: #999;
+}
+
+textarea {
+  min-height: calc(4 * 1.5 * 1rem);
+}
+</style>
