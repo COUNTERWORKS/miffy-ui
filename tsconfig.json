@@ -9,6 +9,13 @@
       "jsx": "react",
       "baseUrl": "./",
       "typeRoots": ["src/interfaces"],
+      "paths": {
+        "@": ["src/*"],
+        "components/*": ["src/components/*"],
+        "common/*": ["src/common/*"],
+        "pages/*": ["src/pages/*"],
+        "themes/*": ["resources/src/themes/*"],
+      },
   },
   "include": [
       "./src/**/*"
