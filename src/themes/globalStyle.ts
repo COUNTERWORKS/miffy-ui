@@ -20,6 +20,11 @@ const globalStyles = createGlobalStyle`
     color:${({ theme }): string => theme.palette.colorCode.text};
     margin: 0;
   }
+  @media (max-width: 767px) {
+    body {
+      font-size: 12px;
+    }
+  }
 `;
 
 export default globalStyles;

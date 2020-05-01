@@ -14,7 +14,7 @@
         "components/*": ["src/components/*"],
         "common/*": ["src/common/*"],
         "pages/*": ["src/pages/*"],
-        "themes/*": ["resources/src/themes/*"],
+        "themes/*": ["src/themes/*"],
       },
   },
   "include": [
