@@ -1,0 +1,10 @@
+version: '3'
+services:
+  nodejs:
+    container_name: miffy-ui-nodejs
+    build: .
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - 8080
+    restart: always
