@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
 import AestheticsPage from 'pages/AestheticsPage';
+import AlertPage from 'pages/AlertPage';
 import styled from 'styled-components';
 
 const App: React.FC<{}> = () => (
@@ -28,12 +29,19 @@ const App: React.FC<{}> = () => (
         </Li>
         <Li>
           <NavTitle>Components</NavTitle>
+          <Li>
+            <StyledLink to="/alerts">
+              <Icon className="fa fa-beer" />
+              Alerts
+            </StyledLink>
+          </Li>
         </Li>
       </Nav>
     </MainMenu>
     <Content>
       <Switch>
         <Route exact path="/" component={AestheticsPage} />
+        <Route exact path="/alerts" component={AlertPage} />
       </Switch>
     </Content>
   </Container>
