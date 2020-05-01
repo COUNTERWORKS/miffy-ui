@@ -23,6 +23,8 @@ module.exports = {
     plugins: [new TsconfigPathsPlugin({ configFile: 'tsconfig.json' })],
   },
   devServer: {
-    historyApiFallback: true
+    historyApiFallback: true,
+    disableHostCheck: true,
+    host: '0.0.0.0'
   }
 };
