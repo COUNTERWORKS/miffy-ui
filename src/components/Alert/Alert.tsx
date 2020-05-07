@@ -35,7 +35,7 @@ const Container = styled.div<{ color: AlertColor }>`
   }
   background: ${({ theme, color }): string => theme.palette[color].main};
   color: ${({ theme, color }): string => theme.palette[color].contrastText};
-  @media (max-width: 767px) {
+  @media (max-width: ${MIN_WIDTH}px) {
     padding: ${({ theme }): string => `${theme.size.space(2)}px`};
   }
 `;

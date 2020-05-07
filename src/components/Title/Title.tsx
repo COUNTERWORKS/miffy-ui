@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { TitleSize } from 'themes/createSize';
+import { MIN_WIDTH } from '@/constants';
 import styled, { css, CSSProp } from 'styled-components';
 
 interface Props {
@@ -24,7 +25,7 @@ const Heading = styled.h1<{ size: TitleSize }>`
       font-size: ${title.pc[size]}px;
       font-weight: ${weight.demiBold};
       margin-bottom: ${size === 'xlarge' ? 48 : 24}px;
-      @media (max-width: 767px) {
+      @media (max-width: ${MIN_WIDTH}px) {
         font-size: ${title.sp[size]}px;
         margin-bottom: ${size === 'xlarge' ? 32 : 16}px;
       }
