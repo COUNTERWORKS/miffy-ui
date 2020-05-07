@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Color } from 'themes/createPalette';
+import { MIN_WIDTH } from '@/constants';
 import styled from 'styled-components';
 
 type AlertColor = Exclude<Color, 'primary' | 'secondary'>;
@@ -60,7 +61,7 @@ const CloseIcon = styled.div`
     cursor: pointer;
     opacity: 0.8;
   }
-  @media (max-width: 767px) {
+  @media (max-width: ${MIN_WIDTH}px) {
     top: 8px;
     right: 8px;
     font-size: 18px;

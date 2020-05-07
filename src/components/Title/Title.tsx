@@ -17,11 +17,12 @@ export const Title: React.FC<Props> = ({ children, tag, size = 'regular', classN
 
 const Heading = styled.h1<{ size: TitleSize }>`
   ${({ theme, size }): CSSProp => {
-    const { title, fontWeight } = theme.size;
+    const { title } = theme.size.font;
+    const { weight } = theme;
 
     return css`
       font-size: ${title.pc[size]}px;
-      font-weight: ${fontWeight.demiBold};
+      font-weight: ${weight.demiBold};
       margin-bottom: ${size === 'xlarge' ? 48 : 24}px;
       @media (max-width: 767px) {
         font-size: ${title.sp[size]}px;

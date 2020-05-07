@@ -102,7 +102,7 @@ const NavTitle = styled.span`
   display: block;
   padding: ${({ theme }): string => `${theme.size.space(2)}px ${theme.size.space(4)}px`};
   margin-top: ${({ theme }): string => `${theme.size.space(4)}px`};
-  font-weight: ${({ theme }): number => theme.size.fontWeight.bold};
+  font-weight: ${({ theme }): number => theme.weight.bold};
 `;
 
 const Title = styled.h1`
@@ -119,12 +119,12 @@ const Title = styled.h1`
     text-decoration: none;
     outline: none;
     margin: 0;
-    font-weight: ${({ theme }): number => theme.size.fontWeight.bold};
+    font-weight: ${({ theme }): number => theme.weight.bold};
   }
   span {
     font-size: 1rem;
     display: block;
-    font-weight: ${({ theme }): number => theme.size.fontWeight.bold};
+    font-weight: ${({ theme }): number => theme.weight.bold};
   }
 `;
 
