@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Color } from 'themes/createPalette';
+import { MIN_WIDTH } from '@/constants';
 import styled from 'styled-components';
 
 type AlertColor = Exclude<Color, 'primary' | 'secondary'>;
@@ -34,7 +35,7 @@ const Container = styled.div<{ color: AlertColor }>`
   }
   background: ${({ theme, color }): string => theme.palette[color].main};
   color: ${({ theme, color }): string => theme.palette[color].contrastText};
-  @media (max-width: 767px) {
+  @media (max-width: ${MIN_WIDTH}px) {
     padding: ${({ theme }): string => `${theme.size.space(2)}px`};
   }
 `;
@@ -60,7 +61,7 @@ const CloseIcon = styled.div`
     cursor: pointer;
     opacity: 0.8;
   }
-  @media (max-width: 767px) {
+  @media (max-width: ${MIN_WIDTH}px) {
     top: 8px;
     right: 8px;
     font-size: 18px;

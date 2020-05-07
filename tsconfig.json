@@ -10,7 +10,7 @@
       "baseUrl": "./",
       "typeRoots": ["src/interfaces"],
       "paths": {
-        "@": ["src/*"],
+        "@/*": ["src/*"],
         "components/*": ["src/components/*"],
         "common/*": ["src/common/*"],
         "pages/*": ["src/pages/*"],
