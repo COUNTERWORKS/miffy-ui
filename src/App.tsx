@@ -3,6 +3,7 @@ import { Link, Switch, Route } from 'react-router-dom';
 import AestheticsPage from 'pages/AestheticsPage';
 import AlertPage from 'pages/AlertPage';
 import TitlePage from 'pages/TitlePage';
+import GridPage from 'pages/GridPage';
 import styled from 'styled-components';
 
 const App: React.FC<{}> = () => (
@@ -43,6 +44,12 @@ const App: React.FC<{}> = () => (
             Title
           </StyledLink>
         </Li>
+        <Li>
+          <StyledLink to="/grid">
+            <Icon className="fa fa-beer" />
+            Grid
+          </StyledLink>
+        </Li>
       </Nav>
     </MainMenu>
     <Content>
@@ -50,6 +57,7 @@ const App: React.FC<{}> = () => (
         <Route exact path="/" component={AestheticsPage} />
         <Route exact path="/alerts" component={AlertPage} />
         <Route exact path="/title" component={TitlePage} />
+        <Route exact path="/grid" component={GridPage} />
       </Switch>
     </Content>
   </Container>
