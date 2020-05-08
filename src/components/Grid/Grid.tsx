@@ -86,7 +86,7 @@ const Container = styled.div<ContainerProps>`
                 margin: 0px -4px -8px;
                 .grid_item {
                   margin-bottom: ${wrap === 'nowrap' ? 0 : null};
-                  width: ${`calc(100% / ${col} - 8px)`};
+                  width: calc(100% / ${col} - 8px);
                 }
               `
             : css`
