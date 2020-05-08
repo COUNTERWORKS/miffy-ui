@@ -69,7 +69,7 @@ const Container = styled.div<ContainerProps>`
               align-items: ${align};
               justify-content: ${justifyContent};
               .grid_item {
-                margin-bottom: ${wrap === 'nowrap' ? 0 : null};
+                ${wrap === 'nowrap' && 'margin-bottom: 0'};
                 width: ${getWidth(col)};
               }
             `
@@ -77,7 +77,7 @@ const Container = styled.div<ContainerProps>`
               margin: 0px 8px 16px;
             `
       };
-      margin-bottom: ${wrap === 'nowrap' ? 0 : null};
+      ${wrap === 'nowrap' && 'margin-bottom: 0'};
 
       @media (max-width: ${MIN_WIDTH}px) {
         ${
@@ -85,7 +85,7 @@ const Container = styled.div<ContainerProps>`
             ? css`
                 margin: 0px -4px -8px;
                 .grid_item {
-                  margin-bottom: ${wrap === 'nowrap' ? 0 : null};
+                  ${wrap === 'nowrap' && 'margin-bottom: 0'};
                   width: calc(100% / ${col} - 8px);
                 }
               `
