@@ -54,6 +54,8 @@ const Container = styled.div<ContainerProps>`
           return 'calc(100% / 2 - 16px)';
         case 3:
           return 'calc((100% / 3 - 16px) - 0.01px)';
+        case 4:
+          return 'calc(100% / 4 - 16px)';
         default:
           return '';
       }

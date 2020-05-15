@@ -3,7 +3,7 @@ import { Color } from 'themes/createPalette';
 import { MIN_WIDTH } from '@/constants';
 import styled from 'styled-components';
 
-type AlertColor = Exclude<Color, 'primary' | 'secondary'>;
+type AlertColor = Extract<Color, 'success' | 'info' | 'error' | 'caution'>;
 
 interface Props {
   children: React.ReactNode;
