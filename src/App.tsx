@@ -4,6 +4,7 @@ import AestheticsPage from 'pages/AestheticsPage';
 import AlertPage from 'pages/AlertPage';
 import TitlePage from 'pages/TitlePage';
 import GridPage from 'pages/GridPage';
+import { ButtonPage } from 'pages/ButtonPage';
 import styled from 'styled-components';
 
 const App: React.FC<{}> = () => (
@@ -50,6 +51,12 @@ const App: React.FC<{}> = () => (
             Grid
           </StyledLink>
         </Li>
+        <Li>
+          <StyledLink to="/button">
+            <Icon className="fa fa-beer" />
+            Button
+          </StyledLink>
+        </Li>
       </Nav>
     </MainMenu>
     <Content>
@@ -58,6 +65,7 @@ const App: React.FC<{}> = () => (
         <Route exact path="/alerts" component={AlertPage} />
         <Route exact path="/title" component={TitlePage} />
         <Route exact path="/grid" component={GridPage} />
+        <Route exact path="/button" component={ButtonPage} />
       </Switch>
     </Content>
   </Container>
