@@ -10,7 +10,6 @@ interface Props {
   size?: Size;
   color?: ButtonColor;
   formAdjacent?: boolean;
-  disabled?: boolean;
   onClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
   className?: string;
 }

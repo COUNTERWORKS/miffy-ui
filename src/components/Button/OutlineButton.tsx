@@ -9,7 +9,6 @@ interface Props {
   children: React.ReactNode;
   size?: Size;
   color?: ButtonColor;
-  disabled?: boolean;
   onClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
   className?: string;
 }

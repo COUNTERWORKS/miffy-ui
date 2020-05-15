@@ -10,7 +10,6 @@ interface Props {
   color?: Color;
   onClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
   formAdjacent?: boolean;
-  disabled?: boolean;
   className?: string;
 }
 
@@ -20,22 +19,14 @@ export const BaseButton: React.FC<Props> = ({
   color = 'primary',
   onClick = () => null,
   formAdjacent = false,
-  disabled = false,
   className = '',
 }) => (
-  <Container
-    color={color}
-    size={size}
-    onClick={onClick}
-    formAdjacent={formAdjacent}
-    disabled={disabled}
-    className={className}
-  >
+  <Container color={color} size={size} onClick={onClick} formAdjacent={formAdjacent} className={className}>
     {children}
   </Container>
 );
 
-const Container = styled.button<{ color: Color; size: Size; formAdjacent: boolean; disabled: boolean }>`
+const Container = styled.button<{ color: Color; size: Size; formAdjacent: boolean }>`
   display: block;
   padding: ${({ formAdjacent }) => (formAdjacent ? '8px 24px' : '12px 24px')};
   margin: 0;
@@ -48,13 +39,6 @@ const Container = styled.button<{ color: Color; size: Size; formAdjacent: boolea
   outline: none;
   border-radius: 3px;
   transition: all 0.2s ease-in-out;
-  :hover {
-    ${({ disabled }) =>
-      disabled &&
-      css`
-        cursor: default;
-      `}
-  }
   ${({ size }) => {
     switch (size) {
       case 'auto':
