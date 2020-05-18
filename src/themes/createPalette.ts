@@ -13,6 +13,8 @@ export interface PaletteTheme {
   success: PaletteType;
   caution: PaletteType;
   error: PaletteType;
+  newtral: PaletteType;
+  light: PaletteType;
 }
 
 interface ColorLevel {
@@ -147,6 +149,16 @@ const paletteTheme: PaletteTheme = {
     main: colorCode.red[200],
     hover: darken(0.1, colorCode.red[200]),
     contrastText: colorCode.red[700],
+  },
+  newtral: {
+    main: colorCode.gray[500],
+    hover: lighten(0.1, colorCode.gray[500]),
+    contrastText: colorCode.white,
+  },
+  light: {
+    main: colorCode.white,
+    hover: colorCode.white,
+    contrastText: colorCode.gray[700],
   },
 };
 
