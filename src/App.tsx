@@ -4,6 +4,7 @@ import AestheticsPage from 'pages/AestheticsPage';
 import AlertPage from 'pages/AlertPage';
 import TitlePage from 'pages/TitlePage';
 import GridPage from 'pages/GridPage';
+import { BadgePage } from 'pages/BadgePage';
 import { ButtonPage } from 'pages/ButtonPage';
 import styled from 'styled-components';
 
@@ -40,6 +41,18 @@ const App: React.FC<{}> = () => (
           </StyledLink>
         </Li>
         <Li>
+          <StyledLink to="/badges">
+            <Icon className="fa fa-beer" />
+            Badges
+          </StyledLink>
+        </Li>
+        <Li>
+          <StyledLink to="/button">
+            <Icon className="fa fa-beer" />
+            Buttons
+          </StyledLink>
+        </Li>
+        <Li>
           <StyledLink to="/title">
             <Icon className="fa fa-beer" />
             Title
@@ -51,18 +64,13 @@ const App: React.FC<{}> = () => (
             Grid
           </StyledLink>
         </Li>
-        <Li>
-          <StyledLink to="/button">
-            <Icon className="fa fa-beer" />
-            Button
-          </StyledLink>
-        </Li>
       </Nav>
     </MainMenu>
     <Content>
       <Switch>
         <Route exact path="/" component={AestheticsPage} />
         <Route exact path="/alerts" component={AlertPage} />
+        <Route exact path="/badges" component={BadgePage} />
         <Route exact path="/title" component={TitlePage} />
         <Route exact path="/grid" component={GridPage} />
         <Route exact path="/button" component={ButtonPage} />

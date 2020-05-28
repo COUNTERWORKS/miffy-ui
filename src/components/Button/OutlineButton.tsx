@@ -24,6 +24,7 @@ const StyledButton = styled(BaseButton)<{ color: Color }>`
     return css`
       color: ${theme.palette[color].main};
       border-color: ${theme.palette[color].main};
+      background: ${({ theme }) => theme.palette.colorCode.white};
       :hover {
         color: ${theme.palette[color].contrastText};
         background: ${theme.palette[color].main};
