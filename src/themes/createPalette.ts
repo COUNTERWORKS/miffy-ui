@@ -156,7 +156,7 @@ const paletteTheme: PaletteTheme = {
     contrastText: colorCode.white,
   },
   light: {
-    main: colorCode.white,
+    main: colorCode.gray[100],
     hover: colorCode.white,
     contrastText: colorCode.gray[700],
   },
