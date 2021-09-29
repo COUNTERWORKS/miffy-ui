@@ -9,6 +9,9 @@
     "type": "git",
     "url": "git+https://github.com/COUNTERWORKS/miffy-ui.git"
   },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
   "bugs": {
     "url": "https://github.com/COUNTERWORKS/miffy-ui/issues"
   },
