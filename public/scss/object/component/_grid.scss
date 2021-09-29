@@ -1,0 +1,99 @@
+@use '../../foundation/helpers' as *;
+.c-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: {
+    right: -8px;
+    left: -8px;
+    bottom: -16px;
+  }
+  @include mobile {
+    margin: {
+      right: -4px;
+      left: -4px;
+      bottom: -8px;
+    }
+  }
+  &__item {
+    margin: {
+      right: 8px;
+      left: 8px;
+      bottom: 16px;
+    }
+    @include mobile {
+      margin: {
+        right: 4px;
+        left: 4px;
+        bottom: 8px;
+      }
+    }
+  }
+  &--center {
+    justify-content: center;
+  }
+  &--between {
+    justify-content: space-between;
+  }
+  &--flexStart {
+    justify-content: flex-start;
+  }
+  &--flexEnd {
+    justify-content: flex-end;
+  }
+  &--alignStart {
+    align-items: flex-start;
+  }
+  &--alignCenter {
+    align-items: center;
+  }
+  &--alignEnd {
+    align-items: flex-end;
+  }
+  &--nowrap {
+    flex-wrap: nowrap;
+    margin-bottom: 0;
+    > .c-grid__item {
+      margin-bottom: 0;
+    }
+  }
+  &--col2 {
+    > .c-grid__item {
+      width: calc(100% / 2 - 16px);
+      @include mobile {
+        width: calc(100% / 2 - 8px);
+      }
+    }
+  }
+  &--col3 {
+    > .c-grid__item {
+      width: calc((100% / 3 - 16px) - 0.01px);
+      @include mobile {
+        width: calc(100% / 2 - 8px);
+      }
+    }
+  }
+  &--col4 {
+    > .c-grid__item {
+      width: calc(100% / 4 - 16px);
+      @include mobile {
+        width: calc(100% / 2 - 8px);
+      }
+    }
+  }
+  &--col5 {
+    > .c-grid__item {
+      width: calc(100% / 5 - 16px);
+      @include mobile {
+        width: calc(100% / 2 - 8px);
+      }
+    }
+  }
+  &--col6 {
+    > .c-grid__item {
+      width: calc(100% / 6 - 16px);
+      @include mobile {
+        width: calc(100% / 2 - 8px);
+      }
+    }
+  }
+}

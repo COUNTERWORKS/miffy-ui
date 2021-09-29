@@ -1,0 +1,49 @@
+@use '../../foundation/helpers' as *;
+.c-title {
+  @include font-size(24);
+  font-weight: bold;
+  margin: 0 0 24px;
+  @include mobile {
+    @include font-size(18);
+    margin: 0 0 16px;
+  }
+  &--xlarge {
+    @include font-size(42);
+    margin: 0 0 48px;
+    @include mobile {
+      @include font-size(24);
+      margin: 0 0 32px;
+    }
+  }
+  &--large {
+    @include font-size(30);
+    @include mobile {
+      @include font-size(21);
+    }
+  }
+  &--small {
+    @include font-size(18);
+    @include mobile {
+      @include font-size(14);
+    }
+  }
+  &--xSmall {
+    @include font-size(16);
+    @include mobile {
+      @include font-size(14);
+    }
+  }
+  &__responsive {
+    @include font-size(24);
+    font-weight: 600;
+    margin: 0 0 24px;
+    @include mobile {
+      @include font-size(18);
+      font-weight: 600;
+      margin: 0 0 16px;
+    }
+    &--small {
+      @include font-size(18);
+    }
+  }
+}

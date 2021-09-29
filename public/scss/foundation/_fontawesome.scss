@@ -1,0 +1,49 @@
+@font-face {
+   font-family: 'Font Awesome 5 Pro';
+   font-style: normal;
+   font-weight: 300;
+   src: url('https://kit-pro.fontawesome.com/releases/latest/webfonts/pro-fa-light-300-5.0.0.woff2') format('woff2'),
+        url('https://kit-pro.fontawesome.com/releases/latest/webfonts/pro-fa-light-300-5.11.0.woff2') format('woff2');
+   font-display: swap;
+ }
+
+@font-face {
+   font-family: 'Font Awesome 5 Brands';
+   font-style: normal;
+   font-weight: 400;
+   src: url('https://kit-pro.fontawesome.com/releases/latest/webfonts/pro-fa-brands-400-5.0.0.woff2') format('woff2'),
+        url('https://kit-pro.fontawesome.com/releases/latest/webfonts/pro-fa-brands-400-5.8.2.woff2') format('woff2');
+   font-display: swap;
+ }
+ 
+ @font-face {
+   font-family: 'Font Awesome 5 Pro';
+   font-style: normal;
+   font-weight: 400;
+   src: url('https://kit-pro.fontawesome.com/releases/latest/webfonts/pro-fa-regular-400-5.7.0.woff2') format('woff2'),
+        url('https://kit-pro.fontawesome.com/releases/latest/webfonts/pro-fa-regular-400-5.0.0.woff2') format('woff2');
+   font-display: swap;
+ }
+ 
+  @font-face {
+   font-family: 'Font Awesome 5 Pro';
+   font-style: normal;
+   font-weight: 900;
+   src: url('https://kit-pro.fontawesome.com/releases/latest/webfonts/pro-fa-solid-900-5.0.11.woff2') format('woff2'),
+        url('https://kit-pro.fontawesome.com/releases/latest/webfonts/pro-fa-solid-900-5.0.0.woff2') format('woff2');
+   font-display: swap;
+ }
+
+.fa-yen {
+  &:before {
+    display: block;
+    width: 14px;
+    width: 1.4rem;
+    height: 14px;
+    height: 1.4rem;
+    content: '';
+    background: center center no-repeat;
+    background-size: 14px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAAFACAYAAADNkKWqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODkxNDgzODMzOEU1MTFFOUJGMDlGQjFEMUU0RTU4QjQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODkxNDgzODQzOEU1MTFFOUJGMDlGQjFEMUU0RTU4QjQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4OTE0ODM4MTM4RTUxMUU5QkYwOUZCMUQxRTRFNThCNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4OTE0ODM4MjM4RTUxMUU5QkYwOUZCMUQxRTRFNThCNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoimBLUAAAS4SURBVHja7N0xahRRGMDxrCxRLLyAtVgaLdT6VUE9QTob7cRjiJ2dnmAvoO20gkjQ4BVyAo3gNuMXmMJOyLyZecP3+8FXZnbnvZ0/s7uB3fR9fwCQ0TVLAAggQDLbq/5hKcXqAYvqum6ZAP7jTszbmOOYG7YEqOx3zFnMLuZ9zH7xO8DB3ZgvMbfsETCRmzGPh3ke8yzmvMaBx34G+Eb8gBkdxXyKud5CAI/tBzCzezEvWgigz/yAJZy0EECAJdwXQCCrJj4DBFgtAQQEEEAAAQQQQAABBBBAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQYH7blT3fjS1rSm//WfD1kC6Ao38JnjpKKfafxV8P3gIDCCCAAAIIIIAAAggggAACCCAggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIICCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAgggIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAgAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAgggwP9t1/aESyl2LTH7T+YA9rYsNfuPt8AAAggggAACCCCAAAIIIIAAAggggIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAgggwNLW9rvAG1sGzVrd7zavLYAHXdd5mUFjSineAgMIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAgIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAICCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggIIIAAAggggAACCCCAAAIIIIAAAggggAACtG5rCaBNpRSL4A4QCIcxr2I+x/yM6Rscd4BAdbdjPsYcWQp3gJDtzk/8BBBSeil+AghZnVgCAYSsHlgCAYSsDi2BAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACAnhF+xmf6y/bRUJ7SzBdD8YG8HTGE/5hz0no1BJM14OxAdzNeMI7e05CXvcTrsvYAH6I+T7DyZ4NjwXZzHWNrUm1HowN4J+YpzHfJjzZy81/MjwWZDPHNbYmVXtQ41vg85hHMa9jvsZcVDjmxXCsy2M+HB4DspriGluTyXpQ62cxL7+pejcMUJ9rbAKbvu+tApCSf4QG0vorwAAaHXognijRJwAAAABJRU5ErkJggg==');
+  }
+}

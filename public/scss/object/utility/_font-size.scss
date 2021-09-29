@@ -1,0 +1,32 @@
+@use '../../foundation/mixin' as *;
+.u-fs-xxxlarge {
+  @include font-size(42);
+}
+
+.u-fs-xxlarge {
+  @include font-size(32);
+}
+
+.u-fs-xlarge {
+  @include font-size(24);
+}
+
+.u-fs-large {
+  @include font-size(18);
+}
+
+.u-fs-regular {
+  @include font-size(14);
+}
+
+.u-fs-small {
+  @include font-size(12);
+}
+
+.u-fs-xsmall {
+  @include font-size(10);
+}
+
+.u-fs-xsmall {
+  @include font-size(10);
+}

@@ -1,0 +1,130 @@
+@use '../../foundation/helpers' as *;
+.c-favoriteModal {
+  &__list {
+    width: 100%;
+  }
+  &__body {
+    position: relative;
+    height: 600px;
+    @include mobile {
+      height: 100vh;
+      -webkit-overflow-scrolling: touch;
+      overflow: scroll;
+    }
+  }
+  &__content {
+    position: relative;
+    min-height: 300px;
+    max-height: calc(600px - 160px);
+    overflow: scroll;
+    @include mobile {
+      min-height: calc(100vh - 160px);
+      max-height: none;
+    }
+  }
+  &__signupContent {
+    border-bottom: 1px solid $color-gray-200;
+    padding: 8px 0;
+  }
+  &__contentTitle {
+    @include font-size(18);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  &__meritDescription {
+    width: calc(100% - 68px);
+    text-align: left;
+    margin: auto 0;
+  }
+  &__footer {
+    border-top: 1px solid $color-border;
+    padding: 16px 24px;
+    background: $color-white;
+    border-radius: 0px 0px 3px 3px;
+    border-radius: 0 0 3px 3px;
+    @include tablet {
+      position: absolute;
+      bottom: 0;
+      width: 272px;
+    }
+  }
+  &__box {
+    width: 100%;
+    padding: 16px 0;
+    border-bottom: 1px solid $color-border;
+    &--flex {
+      display: flex;
+      justify-content: space-between;
+    }
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    &--form {
+      display: block;
+    }
+    &--footer {
+      padding-bottom: 0;
+    }
+  }
+  &__item {
+    i {
+      cursor: pointer;
+    }
+    &--icon {
+      margin-left: 10px;
+    }
+  }
+  &__fav {
+    color: $color-primary;
+  }
+  &__spaceTitle {
+    @include font-size(12);
+    height: calc(3em * 1.5);
+    overflow: hidden;
+  }
+  &__spaceImage {
+    width: 78px;
+    height: 59px;
+    margin-right: 5px;
+  }
+  &__buttonBox {
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  &__formButton {
+    display: inline;
+    padding: 13px 16px;
+    &--cancel {
+      color: $color-gray-400;
+      &:hover {
+        color: $color-gray-400;
+        opacity: 0.8;
+      }
+    }
+  }
+  &__favoriteCategory {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  &__errorBox {
+    padding-right: 19px;
+  }
+  &__errorMessage {
+    color: $color-red-700;
+  }
+  &__backButton {
+    margin-bottom: 10px;
+    width: 3em;
+    &:hover {
+      cursor: pointer;
+    }
+    i {
+      margin-right: 5px;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@use '../../foundation/helpers' as *;
+.c-formChk {
+  position: relative;
+  @include font-size(14);
+  &--inline {
+    display: inline-block;
+  }
+  &--mailMagazine {
+    color: $color-gray-500;
+    @include font-size(12);
+  }
+  &__label {
+    min-height: 1.7rem;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding-left: 2.5rem;
+    &:hover {
+      cursor: pointer;
+    }
+    &:before {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 1.7rem;
+      height: 1.7rem;
+      border: solid 2px #ddd;
+      background-color: #fff;
+      content: '';
+      border-radius: 3px;
+      box-sizing: border-box;
+      transition: 0.2s ease-in-out;
+      transition-property: background-color, color, border-color, opacity;
+    }
+  }
+  &__input {
+    -webkit-clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(100%);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(100%);
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    &:checked {
+      + .c-formChk__label {
+        &:before {
+          background: $color-secondary;
+          box-shadow: 0 0 0 2px $color-blue-200;
+          border-color: $color-secondary;
+        }
+        &:after {
+          @include fontAwesome;
+          content: "\f00c";
+          top: 3px;
+          left: 2px;
+          right: auto;
+          color: #fff;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

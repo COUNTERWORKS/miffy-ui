@@ -1,0 +1,85 @@
+$color-white: #fff;
+$color-black: #000;
+$color-primary: #ff4a1a; //conversion
+$color-secondary: #0d6780; //complementary
+
+$color-link: $color-primary;
+$color-link-hover: lighten($color-link, 5%);
+
+$color-gray-200: #ddd; //$color-border
+$color-gray-100: #f5f5f5;
+$color-gray-150: #e5e5e5;
+$color-gray-300: darken($color-gray-200, 10%); //#a7a7a7
+$color-gray-400: darken($color-gray-200, 20%); //#a7a7a7
+$color-gray-500: #8e8e8e; //附帯情報
+$color-gray-600: darken($color-gray-200, 40%); //#5b5b5b
+$color-gray-700: #414141; //本文用
+$color-gray-800: darken($color-gray-200, 60%); //#282828
+$color-gray-900: darken($color-gray-200, 70%); //#0e0e0e
+
+$color-text: $color-gray-700;
+$color-text-gray: $color-gray-500;
+$color-border: $color-gray-200;
+
+$color-blue-200: #cbe2ee; //info bg
+$color-blue-100: lighten($color-blue-200, 10%); //
+$color-blue-300: darken($color-blue-200, 10%); //
+$color-blue-400: darken($color-blue-200, 20%); //
+$color-blue-500: darken($color-blue-200, 30%); //
+$color-blue-600: darken($color-blue-200, 40%); //
+$color-blue-700: darken($color-blue-200, 50%); //info text
+$color-blue-800: darken($color-blue-200, 60%); //
+$color-blue-900: darken($color-blue-200, 70%); //
+
+$color-green-200: #c6edcf; //success bg
+$color-green-100: lighten($color-green-200, 10%); //
+$color-green-300: darken($color-green-200, 10%); //
+$color-green-400: darken($color-green-200, 20%); //
+$color-green-500: darken($color-green-200, 30%); //
+$color-green-600: darken($color-green-200, 40%); //
+$color-green-700: darken($color-green-200, 50%); //success text
+$color-green-800: darken($color-green-200, 60%); //
+$color-green-900: darken($color-green-200, 70%); //
+
+$color-orange-200: #f3ddba; //caution bg
+$color-orange-100: lighten($color-orange-200, 10%); //
+$color-orange-300: darken($color-orange-200, 10%); //
+$color-orange-400: darken($color-orange-200, 20%); //
+$color-orange-500: darken($color-orange-200, 30%); //
+$color-orange-600: darken($color-orange-200, 40%); //
+$color-orange-700: darken($color-orange-200, 50%); //caution text
+$color-orange-800: darken($color-orange-200, 60%); //
+$color-orange-900: darken($color-orange-200, 70%); //
+
+$color-red-200: #f6d0cd; //error bg
+$color-red-100: lighten($color-red-200, 10%); //
+$color-red-300: darken($color-red-200, 10%); //
+$color-red-400: darken($color-red-200, 20%); //
+$color-red-500: darken($color-red-200, 30%); //
+$color-red-600: darken($color-red-200, 40%); //
+$color-red-700: darken($color-red-200, 50%); //error text
+$color-red-800: darken($color-red-200, 60%); //
+$color-red-900: darken($color-red-200, 70%); //
+
+// box-shadow
+$shadow-base: 0 0 6px rgba(0,0,0,.15);
+
+// c-share用
+$color-facebook: #3b5998;
+$color-twitter: #1DA1F2;
+$color-line: #00c300;
+$color-authBase: #29836f;
+
+//c-grid用
+$baseNum: calc(100% / 12);
+
+// Media Queries用
+$gap: 32px !default;
+$tablet: 769px !default;
+$desktop: 960px + 2 * $gap !default;
+
+// 旧color
+$green-color: #68a85b;
+$blue-color: #5b80a8;
+
+$miffy-image-path: './' !default;

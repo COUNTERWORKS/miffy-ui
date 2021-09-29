@@ -1,0 +1,75 @@
+@use '../../foundation/helpers' as *;
+.c-card {
+  display: flex;
+  margin: 0 -8px;
+  @include mobile {
+    flex-wrap: nowrap;
+    overflow: scroll;
+    padding: 8px 0;
+    margin: 0;
+  }
+  &__item {
+    display: block;
+    flex-shrink: 0;
+    width: calc((100% / 3 - 16px) - 0.01px);
+    color: $color-text;
+    margin: 0 8px;
+    padding: 16px;
+    background: $color-white;
+    border: 1px solid $color-gray-200;
+    box-shadow: $shadow-base;
+    border-radius: 6px;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: opacity .2s ease;
+    &:hover {
+      color: $color-text;
+      text-decoration: none;
+      opacity: .7;
+    }
+    @include mobile {
+      width: 256px;
+      position: relative;
+      &:first-child {
+        margin-left: 16px;
+      }
+      &:last-child {
+        &::after {
+          content: "";
+          position: absolute;
+          width: 16px;
+          height: 100%;
+          display: block;
+          right: -16px;
+          top: 0;
+        }
+      }
+    }
+  }
+  &__title {
+    font-weight: bold;
+    @include font-size(16);
+    @include mobile {
+      @include font-size(14);
+    }
+    margin: 0 0 4px;
+    &--oneLine {
+      min-height: calc(1em * 1.5);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  &__text {
+    margin: 0;
+    @include mobile {
+      @include font-size(12);
+    }
+    &--oneLine {
+      min-height: calc(1em * 1.5);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}

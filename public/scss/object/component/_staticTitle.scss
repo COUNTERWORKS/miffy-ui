@@ -1,0 +1,17 @@
+@use '../../foundation/helpers' as *;
+.c-staticTitle {
+  font-weight: bold;
+  margin: 0;
+  &--section {
+    @include font-size(30);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    @include mobile {
+      @include font-size(24);
+    }
+  }
+  &--large {
+    @include font-size(18);
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,32 @@
+.u-hide {
+  display: none;
+}
+
+.u-block {
+  display: block;
+}
+
+.u-displayFlex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.u-inline {
+  display: inline !important;
+}
+
+.u-inlineBlock {
+  display: inline-block !important;
+}
+
+.u-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.u-rightcol {
+  float: right;
+}

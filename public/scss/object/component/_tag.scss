@@ -1,0 +1,24 @@
+@use '../../foundation/helpers' as *;
+.c-tag {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0;
+  padding: 0;
+  margin: -8px 0 0;
+  list-style: none;
+  &__item {
+    display: inline-block;
+    @include font-size(12);
+    color: $color-secondary;
+    line-height: 1em;
+    margin: 8px 8px 0 0;
+    padding: 8px 10px;
+    border: 1px solid $color-secondary;
+    border-radius: 3px;
+    &:hover {
+      color: $color-white;
+      text-decoration: none;
+      background: $color-secondary;
+    }
+  }
+}

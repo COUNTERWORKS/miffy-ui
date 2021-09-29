@@ -1,0 +1,96 @@
+@use '../../foundation/helpers' as *;
+.c-badge {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 100px;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: normal;
+  @include font-size(12);
+  &--info {
+    background: $color-blue-200;
+    color: $color-blue-700;
+  }
+  &--success {
+    background: $color-green-200;
+    color: $color-green-700;
+  }
+  &--caution {
+    background: $color-orange-200;
+    color: $color-orange-700;
+  }
+  &--error {
+    background: $color-red-200;
+    color: $color-red-700;
+  }
+  &--primary {
+    background: $color-primary;
+    color: #fff;
+  }
+  &--secondary {
+    background: $color-secondary;
+    color: #fff;
+  }
+  &--newtral {
+    background: $color-gray-500;
+    color: #fff;
+  }
+  &--light {
+    background: $color-gray-100;
+    color: $color-gray-700;
+  }
+}
+
+a.c-badge {
+  font-weight: bold;
+  text-decoration: underline;
+  &--info {
+    &:hover {
+      background: darken($color-blue-200,10%);
+      color: $color-blue-700;
+    }
+  }
+  &--success {
+    &:hover {
+      background: darken($color-green-200,10%);
+      color: $color-green-700;
+    }
+  }
+  &--caution {
+    &:hover {
+      background: darken($color-orange-200,10%);
+      color: $color-orange-700;
+    }
+  }
+  &--error {
+    &:hover {
+      background: darken($color-red-200,10%);
+      color: $color-red-700;
+    }
+  }
+  &--primary {
+    &:hover {
+      background: lighten($color-primary,10%);
+      color: #fff;
+    }
+  }
+  &--secondary {
+    &:hover {
+      background: lighten($color-secondary,10%);
+      color: #fff;
+    }
+  }
+  &--newtral {
+    &:hover {
+      background: lighten($color-gray-500,10%);
+      color: #fff;
+    }
+  }
+  &--light {
+    &:hover {
+      background: darken($color-gray-100,10%);
+      color: $color-gray-700;
+    }
+  }
+}

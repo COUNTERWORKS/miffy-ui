@@ -1,0 +1,52 @@
+@use '../../foundation/helpers' as *;
+.c-radioBox {
+  border: solid 1px #ddd;
+  border-radius: 3px;
+  &__title {
+    position: relative;
+    display: block;
+    padding: 12px 16px;
+    margin: 0;
+    font-weight: 600;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &--hasContents {
+    &__title {
+      padding-right: 32px;
+      &:before {
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 300;
+        content: "\f078";
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        @include font-size(16);
+        position: absolute;
+        top: 16px;
+        right: 16px;
+      }
+      &.is-open {
+        &:before {
+          transform: scaleY(-1);
+        }
+      }
+    }
+    &__contents {
+      display: none;
+      border-top: solid 1px #ddd;
+      padding: 16px;
+      *:first-child {
+        margin-top: 0;
+      }
+      *:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

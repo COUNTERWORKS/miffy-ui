@@ -1,0 +1,112 @@
+@use '../../foundation/helpers' as *;
+.c-spaceVerticalOrderList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  &--noBorder {
+    .c-spaceVerticalOrderList__item {
+      border: none;
+      @include mobile {
+        padding-bottom: 0;
+      }
+    }
+    .c-spaceVerticalOrderList__link {
+      padding: 12px 0;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-border;
+    position: relative;
+  }
+  &__mainContainer {
+    display: flex;
+    width: 100%;
+  }
+  &__favButton {
+    width: 32px;
+    height: 28px;
+    position: absolute;
+    z-index: 2;
+    right: 8px;
+    top: 8px;
+    img {
+      cursor: pointer;
+    }
+  }
+  &__link {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 24px 0;
+    color: $color-text;
+    &:hover {
+      color: $color-text;
+      text-decoration: none;
+      .c-spaceVerticalOrderList__title {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 3px;
+    position: relative;
+  }
+  &__info {
+    margin-left: 16px;
+  }
+  &__title {
+    @include font-size(14);
+    margin: 0 0 4px;
+    font-weight: bold;
+    overflow: hidden;
+    height: calc(2em * 1.5);
+  }
+  &__supplemental {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 4px;
+  }
+  &__supplementalItem {
+    color: $color-text-gray;
+    font-weight: normal;
+    i {
+      margin-right: 4px;
+    }
+    & + & {
+      margin-left: 8px;
+    }
+  }
+  &__price {
+    font-weight: bold;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 240px;
+    margin-left: auto;
+    padding-left: 16px;
+    @include mobile {
+      width: 100%;
+      padding-bottom: 16px;
+    }
+  }
+  &__alert {
+    width: 240px;
+    margin: 0;
+    @include mobile {
+      width: auto;
+    }
+  }
+}

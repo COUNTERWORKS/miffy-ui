@@ -1,0 +1,35 @@
+@use '../../foundation/helpers' as *;
+.u-text {
+  @include font-size(14);
+  font-weight: normal;
+  &--xSmall {
+    @include font-size(10);
+  }
+  &--small {
+    @include font-size(12);
+  }
+  &--large {
+    @include font-size(18);
+  }
+  &--xLarge {
+    @include font-size(24);
+  }
+}
+
+.u-textlink {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+  &--primary {
+    color: $color-primary;
+  }
+  &--secondary {
+    color: $color-secondary;
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}

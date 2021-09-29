@@ -1,0 +1,83 @@
+@use '../../foundation/helpers' as *;
+.c-formInput {
+  position: relative;
+  display: block;
+  background: #fff;
+  border: solid 1px #ddd;
+  border-radius: 3px;
+  padding: 10px 12px;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 39px;
+  @include font-size(14);
+  &:focus {
+    outline: none;
+    border-color: $color-secondary;
+  }
+  &.is-success {
+    border-color: $color-green-700;
+  }
+  &.is-error {
+    border-color: $color-red-700;
+  }
+  &.is-disabled,
+  &[disabled] {
+    background: #eee;
+  }
+  &--search {
+    border: none;
+    margin: 0 32px 0 0;
+    padding: 0;
+    &:before {
+      @include fontAwesome;
+      content: '\f002';
+      pointer-events: none;
+    }
+  }
+  &--select {
+    border: none;
+    margin: 0 32px 0 0;
+    padding: 0;
+    select {
+      max-height: 39px;
+      padding-right: 32px;
+      color: $color-text;
+    }
+    &:before {
+      @include fontAwesome;
+      content: '\f078';
+      pointer-events: none;
+    }
+  }
+  &--withIcon {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  &--withIconInput {
+    padding-right: 32px;
+  }
+  &__withIconFigure {
+    font-style: normal;
+    line-height: 1;
+    @include font-size(16);
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 1;
+    pointer-events: none;
+  }
+  &__passwordIcon,
+  &__pointerEventsIcon {
+    cursor: pointer;
+    pointer-events: all;
+    &.fa-eye-slash {
+      right: 11px;
+    }
+  }
+  &--withButtonInput {
+    width: 80%;
+    display: inline-block;
+    margin-right: 8px;
+  }
+}

@@ -1,0 +1,13 @@
+.u-cf:before,
+.u-cf:after {
+  content: " ";
+  display: table;
+}
+
+.u-cf:after {
+  clear: both;
+}
+
+.u-cf {
+  *zoom: 1;
+}

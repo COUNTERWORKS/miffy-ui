@@ -1,0 +1,66 @@
+@use '../../foundation/helpers' as *;
+.c-toggleBox {
+  border: solid 1px $color-border;
+  border-radius: 3px;
+  &--listStyle {
+    & + & {
+      border-radius: 0;
+      border-top: none;
+    }
+    &:last-child {
+      border-radius: 0 0 3px 3px;
+    }
+  }
+  &__title {
+    position: relative;
+    display: block;
+    color: $color-text;
+    padding: 12px 40px 12px 16px;
+    margin: 0;
+    font-weight: 600;
+    @include font-size(16);
+    @include mobile {
+      @include font-size(14);
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    &:before {
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 300;
+      content: "\f078";
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      @include font-size(16);
+      position: absolute;
+      top: 16px;
+      right: 16px;
+    }
+    &.is-open {
+      &:before {
+        transform: scaleY(-1);
+      }
+    }
+    &--link {
+      &::before {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  &__contents {
+    display: none;
+    border-top: solid 1px #ddd;
+    padding: 16px;
+    *:first-child {
+      margin-top: 0;
+    }
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

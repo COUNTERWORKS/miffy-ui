@@ -1,0 +1,278 @@
+@use '../../foundation/helpers' as *;
+.c-notification {
+  position: relative;
+  &__modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background-color: $color-white;
+    &--hidden {
+      visibility: hidden;
+    }
+  }
+  &__sideBar {
+    flex-direction: row;
+    align-items: left;
+    &:hover {
+      color: $color-white;
+    }
+  }
+  &__alert {
+    position: absolute;
+    top: -5px;
+    right: -4px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: $color-primary;
+    border-radius: 50%;
+    @include mobile {
+      top: 16px;
+      left: 16px;
+    }
+  }
+  &__alertMessage {
+    position: absolute;
+    top: -5px;
+    right: -4px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: $color-primary;
+    border-radius: 50%;
+  }
+  @media screen and (max-width: 1280px) {
+    &__alertMessage {
+      position: absolute;
+      top: -3px;
+      right: 10px;
+      display: block;
+      width: 10px;
+      height: 10px;
+      background: $color-primary;
+      border-radius: 50%;
+    }
+    &__alertNotification {
+      position: absolute;
+      top: 19px;
+      left: 15px;
+      display: block;
+      width: 8px;
+      height: 8px;
+      background: $color-primary;
+      border-radius: 50%;
+      &--hidden {
+        visibility: hidden;
+      }
+    }
+  }
+  @include mobile {
+    &__alertMessageSideBar {
+      position: absolute;
+      top: 10px;
+      left: 87px;
+      display: block;
+      width: 8px;
+      height: 8px;
+      background: $color-primary;
+      border-radius: 50%;
+      &--hidden {
+        visibility: hidden;
+      }
+    }
+  }
+  &__menu {
+    font-weight: 700;
+    color: $color-gray-700;
+    white-space: nowrap;
+    padding: 5px 0;
+    flex-direction: column;
+    @include mobile {
+      @include font-size(12);
+    }
+    i {
+      @include font-size(17);
+      @include mobile {
+        @include font-size(14);
+      }
+    }
+    @include mobile {
+      padding: 0;
+
+      i {
+        @include font-size(20);
+      }
+    }
+    &:hover {
+      text-decoration: none;
+      color: $color-primary;
+    }
+  }
+  &__list {
+    color: $color-gray-700;
+    font-weight: normal;
+    width: 440px;
+    max-height: 500px;
+    overflow-y: scroll;
+    background-color: $color-white;
+    position: absolute;
+    top: 32px;
+    right: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    z-index: 1;
+    @include mobile {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+      overflow: scroll;
+      overflow-y: auto;
+      position: fixed;
+      border: solid 1px $color-gray-200;
+      border-bottom: none;
+      top: 0;
+      left: 0;
+      -webkit-overflow-scrolling: touch;
+      z-index: 10000;
+    }
+    a {
+      padding: 16px;
+      display: flex;
+      text-decoration: none;
+      white-space: normal;
+      color: $color-gray-700;
+      text-align: left;
+      &::after {
+        content: none;
+      }
+      &:hover {
+        color: $color-gray-700;
+        opacity: 0.7;
+      }
+    }
+  }
+  &__listBox {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px $color-gray-200;
+    &--blue {
+      background-color: $color-blue-100;
+    }
+  }
+  &__readMore {
+    @include font-size(14);
+    &:hover {
+      color: $color-primary;
+      transition: 0.2s ease-in-out;
+    }
+  }
+  &__load {
+    padding: 12px 0;
+    @include mobile {
+      padding: 12px 0 140px;
+    }
+    text-align: center;
+    cursor: pointer;
+    &--gray {
+      color: $color-gray-700;
+    }
+    &--blue {
+      color: $color-secondary;
+    }
+  }
+  &__body {
+    width: 100%;
+  }
+  &__bodyTitle {
+    @include font-size(14);
+    font-weight: 600;
+  }
+  &__bodyDescription {
+    @include font-size(14);
+  }
+  &__bodyDate {
+    @include font-size(12);
+    color: $color-gray-500;
+  }
+  &__closeButton {
+    width: 100%;
+    height: 50px;
+    border-bottom: solid 1px $color-gray-200;
+    display: fixed;
+    top: 0;
+    left: 0;
+    @include mobile {
+      @include font-size(14);
+    }
+    div {
+      padding: 16px;
+    }
+    a {
+      display: block;
+      float: right;
+      text-decoration: none;
+      @include mobile {
+        display: inline-block;
+        &::after {
+          content: none;
+        }
+      }
+    }
+    i {
+      vertical-align: middle;
+      @include font-size(18);
+    }
+  }
+  &__error {
+    color: $color-red-700;
+  }
+  &__listHeader {
+    clear: both;
+    border-bottom: solid 1px $color-gray-200;
+    a {
+      @include font-size(14);
+      font-weight: 600;
+      padding: 16px;
+      &:hover {
+        color: $color-primary;
+        text-decoration: none;
+      }
+    }
+  }
+  &__noNotifications {
+    @include font-size(14);
+    font-weight: 600;
+    padding: 16px;
+  }
+  &__icon {
+    width: 40px;
+    padding-right: 12px;
+    text-align: center;
+    &--green {
+      color: $color-green-700;
+    }
+    &--orange {
+      color: $color-primary;
+    }
+    &--blue {
+      color: $color-secondary;
+    }
+    &--brown {
+      color: $color-orange-700;
+    }
+    &--red {
+      color: $color-red-700;
+    }
+  }
+
+  &__cancelIcon {
+    @include font-size(20);
+    padding: 16px 0 16px 16px;
+  }
+}

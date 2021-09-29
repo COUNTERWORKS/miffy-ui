@@ -1,0 +1,63 @@
+@use '../../foundation/helpers' as *;
+.c-formBlock {
+  position: relative;
+  margin: 24px 0 0 0;
+  vertical-align: middle;
+  &:nth-of-type(1) {
+    margin-top: 0;
+  }
+  &--center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__label {
+    display: block;
+    margin: 0 0 4px 0;
+    font-weight: 600;
+  }
+  &__optional {
+    color: $color-gray-500;
+  }
+  &__required {
+    color: $color-red-700;
+  }
+  &__message {
+    margin: 6px 0;
+    @include font-size(14);
+    a {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    &--info {
+      color: $color-blue-700;
+      a {
+        color: $color-blue-700;
+      }
+    }
+    &--success {
+      color: $color-green-700;
+      a {
+        color: $color-green-700;
+      }
+    }
+    &--caution {
+      color: $color-orange-700;
+      a {
+        color: $color-orange-700;
+      }
+    }
+    &--error {
+      color: $color-red-700;
+      a {
+        color: $color-red-700;
+      }
+    }
+  }
+  &__hint {
+    display: block;
+    @include font-size(12);
+    color: $color-gray-400;
+    margin: 4px 0;
+  }
+}

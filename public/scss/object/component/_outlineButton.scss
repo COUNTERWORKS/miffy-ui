@@ -1,0 +1,82 @@
+@use '../../foundation/helpers' as *;
+.c-outlineButton {
+  display: block;
+  padding: 12px 24px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background: $color-white;
+  @include font-size(14);
+  font-weight: bold;
+  color: $color-text;
+  text-align: center;
+  border: solid 1px transparent;
+  outline: none;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  &:hover {
+    text-decoration: none;
+    background: $color-text;
+    color: #fff;
+  }
+  &--primary {
+    border-color: $color-primary;
+    color: $color-primary;
+    &:hover {
+      background: $color-primary;
+    }
+  }
+  &--secondary {
+    border-color: $color-secondary;
+    color: $color-secondary;
+    &:hover {
+      background: $color-secondary;
+    }
+  }
+  &--newtral {
+    border-color: $color-gray-500;
+    color: $color-gray-500;
+    &:hover {
+      background: $color-gray-500;
+    }
+  }
+  &--authMail {
+    position: relative;
+    text-align: left;
+    & > span {
+      display: inline-block;
+      padding: 0 0 0 24px;
+    }
+    // font-awesomeのクラス
+    .fa-envelope {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: 10px;
+    }
+  }
+  &--large {
+    width: 400px;
+    @include mobile {
+      width: auto;
+    }
+  }
+  &--normal {
+    width: 240px;
+    @include mobile {
+      width: auto;
+    }
+  }
+  &--auto {
+    display: inline-block;
+    width: auto;
+  }
+  &--formAdjacent {
+    padding: 8px 24px;
+  }
+  &--withIcon {
+    i {
+      margin-right: 4px;
+    }
+  }
+}

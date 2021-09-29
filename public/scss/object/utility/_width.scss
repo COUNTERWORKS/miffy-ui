@@ -1,0 +1,14 @@
+@for $i from 1 through 100 {
+  .u-width#{$i*4}px { width: #{$i*4}px !important; }
+  .u-height#{$i*4}px { height: #{$i*4}px !important; }
+}
+
+.u-width20per { width: 20% !important; }
+.u-width25per { width: 25% !important; }
+.u-width50per { width: 50% !important; }
+.u-width100per { width: 100% !important; }
+
+.u-height20per { height: 20% !important; }
+.u-height25per { height: 25% !important; }
+.u-height50per { height: 50% !important; }
+.u-height100per { height: 100% !important; }

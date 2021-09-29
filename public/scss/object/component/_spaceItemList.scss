@@ -1,0 +1,150 @@
+@use '../../foundation/helpers' as *;
+.c-spaceItemList {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  a {
+    color: $color-text;
+    display: block;
+    transition: 0.2s ease-in-out;
+    transition-property: color, opacity;
+    &:hover {
+      color: $color-link-hover;
+      transition: 0.2s ease-in-out;
+      transition-property: color, opacity;
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    &.c-button {
+      &.c-button--primary {
+        color: $color-white;
+        &:hover {
+          color: $color-white;
+        }
+        &.c-loginModal__loginButton {
+          color: $color-white;
+        }
+      }
+      &.c-loginModal__loginButton {
+        color: $color-primary;
+        &:hover {
+          color: $color-white;
+        }
+        &.c-button--authGoogle {
+          color: $color-black;
+          &:hover {
+            text-decoration: none;
+            color: $color-black;
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+  &__favButton {
+    width: 32px;
+    height: 28px;
+    position: absolute;
+    z-index: 2;
+    right: 8px;
+    top: 8px;
+    img {
+      cursor: pointer;
+    }
+  }
+  &__thumbnail {
+    margin: 0;
+    position: relative;
+    text-align: center;
+    background: $color-gray-200;
+    max-width: 100%;
+    width: 100%;
+    padding-top: 66.66%;
+    overflow: hidden;
+    border-radius: 3px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  &__new {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    margin: 0;
+  }
+  &__price {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 0;
+    padding: 8px;
+    @include font-size(16);
+    @include mobile {
+      @include font-size(14);
+    }
+    line-height: 1;
+    display: inline-block;
+    color: $color-white;
+    background-color: $color-gray-900;
+    white-space: nowrap;
+  }
+  &__priceUnit {
+    @include font-size(12);
+  }
+  &__title {
+    margin: 10px 0 0 0;
+    @include font-size(14);
+    font-weight: bold;
+    line-height: 1.5;
+    height: calc(3em * 1.5);
+    overflow: hidden;
+    @include mobile {
+      height: calc(2em * 1.5);
+      margin: 6px 0 0 0;
+    }
+    &--min {
+      height: calc(1em * 1.5);
+    }
+    &--mid {
+      height: calc(2em * 1.5);
+    }
+    &--auto {
+      height: auto;
+    }
+  }
+  &__description {
+    margin: 10px 0 0;
+    @include mobile {
+      margin: 6px 0 0;
+    }
+  }
+  &__supplemental {
+    list-style: none;
+    margin: 4px 0 0;
+    padding: 0;
+  }
+  &__supplementalItem {
+    color: $color-text-gray;
+    @include font-size(11);
+    @include mobile {
+      height: calc(1em * 1.5);
+    }
+    i {
+      width: 16px;
+      margin-right: 4px;
+      @include mobile {
+        width: 14px;
+        margin-right: 2px;
+      }
+      text-align: center;
+    }
+  }
+}

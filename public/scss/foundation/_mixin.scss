@@ -1,0 +1,44 @@
+@use 'variables' as var;
+@use "sass:math";
+@mixin fontAwesome {
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 300;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  @include font-size(14);
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+}
+
+@mixin font-size($size, $base: 10) {
+  font-size: $size + px;
+  font-size: math.div($size, $base) + rem;
+}
+
+@mixin mobile {
+  @media screen and (max-width: var.$tablet - 1px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: var.$tablet), print {
+    @content;
+  }
+}
+@mixin tablet-only {
+  @media screen and (min-width: var.$tablet) and (max-width: var.$desktop - 1px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: var.$desktop) {
+    @content;
+  }
+}
