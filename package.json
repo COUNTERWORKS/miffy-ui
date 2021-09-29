@@ -1,9 +1,22 @@
 {
-  "name": "miffy-sample",
+  "name": "miffy-ui",
   "version": "1.0.0",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "license": "MIT",
+  "description": "miffy design system",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/COUNTERWORKS/miffy-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/COUNTERWORKS/miffy-ui/issues"
+  },
+  "homepage": "https://github.com/COUNTERWORKS/miffy-ui",
+  "keywords": [
+    "miffy",
+    "miffy-ui"
+  ],
   "dependencies": {
     "clsx": "^1.1.1",
     "react": "^17.0.2",
