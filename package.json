@@ -1,5 +1,5 @@
 {
-  "name": "miffy-ui",
+  "name": "@COUNTERWORKS/miffy-ui",
   "version": "1.0.1",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
