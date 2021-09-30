@@ -5,10 +5,7 @@
   "types": "./lib/index.d.ts",
   "license": "MIT",
   "description": "miffy design system",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/COUNTERWORKS/miffy-ui.git"
-  },
+  "repository": "git://github.com/COUNTERWORKS/miffy-ui.git",
   "publishConfig": {
     "registry":"https://npm.pkg.github.com"
   },
