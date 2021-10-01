@@ -1,13 +1,13 @@
 {
   "name": "@counterworks/miffy-ui",
-  "version": "v0.0.0",
+  "version": "0.0.1",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "license": "MIT",
   "description": "miffy design system",
   "repository": "git://github.com/COUNTERWORKS/miffy-ui.git",
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "bugs": {
     "url": "https://github.com/COUNTERWORKS/miffy-ui/issues"
