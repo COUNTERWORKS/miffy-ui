@@ -2,7 +2,7 @@ import { FC, MouseEventHandler } from 'react';
 import clsx from 'clsx';
 
 export const OutlineButton: FC<{
-  color: 'primary' | 'secondary' | 'newtral';
+  color: 'primary' | 'secondary' | 'newtral' | 'light';
   size?: 'auto' | 'normal' | 'large';
   form?: boolean;
   className?: string;
@@ -10,7 +10,7 @@ export const OutlineButton: FC<{
   type?: 'button' | 'submit';
   onClick?: MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
-}> = ({ color, size, form = false, className, onClick, children, type = 'button', disabled = false, auto = false }) => (
+}> = ({ color, className, onClick, children, type = 'button', size = false, disabled = false, form = false }) => (
   <button
     className={clsx(
       'c-outlineButton',
@@ -18,7 +18,6 @@ export const OutlineButton: FC<{
       size && `c-outlineButton--${size}`,
       form && 'c-outlineButton--formAdjacent',
       disabled && 'c-outlineButton--disabled',
-      auto && 'c-outlineButton--auto',
       className
     )}
     type={type}
