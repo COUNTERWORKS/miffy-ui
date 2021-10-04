@@ -10,13 +10,12 @@ export const Button = forwardRef<
     className?: string;
     onClick?: MouseEventHandler<HTMLButtonElement>;
     type?: 'button' | 'submit';
-    auto?: boolean;
     disabled?: boolean;
     children: ReactNode;
   }
 >(
   (
-    { color, size, form = false, className, onClick, children, type = 'button', disabled = false, auto = false },
+    { color, className, onClick, children, type = 'button', form = false, size='auto', disabled = false },
     ref
   ) => (
     <button
@@ -26,7 +25,6 @@ export const Button = forwardRef<
         size && `c-button--${size}`,
         form && 'c-button--formAdjacent',
         disabled && 'c-button--disabled',
-        auto && 'c-outlineButton--auto',
         className
       )}
       ref={ref}
