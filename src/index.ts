@@ -1,1 +1,1 @@
-export { Button, OutlineButton } from './components'
+export { Button, OutlineButton, Badge } from './components'
