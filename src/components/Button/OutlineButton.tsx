@@ -10,7 +10,7 @@ export const OutlineButton: FC<{
   type?: 'button' | 'submit';
   onClick?: MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
-}> = ({ color, className, onClick, children, type = 'button', size = false, disabled = false, form = false }) => (
+}> = ({ color, className, onClick, children, type = 'button', size = 'auto', disabled = false, form = false }) => (
   <button
     className={clsx(
       'c-outlineButton',
