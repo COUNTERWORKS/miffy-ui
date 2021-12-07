@@ -81,6 +81,7 @@
     box-sizing: border-box;
     &--huge {
       overflow: auto;
+      min-height: 50vw;
     }
     @include mobile {
       padding: 16px 16px 80px;
@@ -117,8 +118,8 @@
     padding: 12px;
     margin: 0;
     &:before {
-      content: '\f00d';
-      font-family: 'Font Awesome 5 Pro';
+      content: "\f00d";
+      font-family: "Font Awesome 5 Pro";
       font-weight: 300;
       -moz-osx-font-smoothing: grayscale;
       -webkit-font-smoothing: antialiased;
