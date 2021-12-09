@@ -1,7 +1,7 @@
 $color-white: #fff;
 $color-black: #000;
-$color-primary: #ff4a1a; //conversion
-$color-secondary: #0d6780; //complementary
+$color-primary: #ff4a1a !default; //conversion
+$color-secondary: #0d6780 !default; //complementary
 
 $color-link: $color-primary;
 $color-link-hover: lighten($color-link, 5%);
@@ -17,9 +17,9 @@ $color-gray-700: #414141; //本文用
 $color-gray-800: darken($color-gray-200, 60%); //#282828
 $color-gray-900: darken($color-gray-200, 70%); //#0e0e0e
 
-$color-text: $color-gray-700;
-$color-text-gray: $color-gray-500;
-$color-border: $color-gray-200;
+$color-text: $color-gray-700 !default;
+$color-text-gray: $color-gray-500 !default;
+$color-border: $color-gray-200 !default;
 
 $color-blue-200: #cbe2ee; //info bg
 $color-blue-100: lighten($color-blue-200, 10%); //
