@@ -50,6 +50,14 @@
       color: lighten($color-gray-700, 10%);
     }
   }
+  &--danger {
+    background: $color-red-700;
+    border-color: $color-red-700;
+    color: $color-white;
+    &:hover {
+      background: lighten($color-red-700, 10%);
+    }
+  }
   &--large {
     width: 400px;
     @include mobile {

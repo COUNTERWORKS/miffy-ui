@@ -40,6 +40,13 @@
       background: $color-gray-500;
     }
   }
+  &--danger {
+    border-color: $color-red-700;
+    color: $color-red-700;
+    &:hover {
+      background: $color-red-700;
+    }
+  }
   &--authMail {
     position: relative;
     text-align: left;
