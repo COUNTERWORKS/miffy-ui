@@ -34,3 +34,8 @@ export const Light = Template.bind({});
 Light.args = {
   color: 'light',
 };
+
+export const Danger = Template.bind({});
+Danger.args = {
+  color: 'danger',
+};
