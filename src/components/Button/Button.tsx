@@ -15,7 +15,7 @@ export const Button = forwardRef<
   }
 >(
   (
-    { color, className, onClick, children, type = 'button', form = false, size='auto', disabled = false },
+    { color, className, onClick, children, type = 'button', form = false, size='auto', disabled = false, ...props },
     ref
   ) => (
     <button
@@ -31,6 +31,7 @@ export const Button = forwardRef<
       type={type}
       onClick={onClick}
       disabled={disabled}
+      {...props}
     >
       {children}
     </button>
