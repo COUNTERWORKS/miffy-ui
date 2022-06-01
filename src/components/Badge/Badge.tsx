@@ -7,13 +7,14 @@ export const Badge: FC<
     color: 'info' | 'success' | 'caution' | 'error' | 'primary' | 'secondary' | 'newtral' | 'light';
     className?: string;
   }
-> = ({ text, color, className }) => (
+> = ({ text, color, className, ...props }) => (
   <span
     className={clsx(
       'c-badge',
       color && `c-badge--${color}`,
       className
     )}
+    {...props}
   >
     {text}
   </span>
