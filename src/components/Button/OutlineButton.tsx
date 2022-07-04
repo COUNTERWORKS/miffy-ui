@@ -1,4 +1,4 @@
-import { FC, MouseEventHandler } from 'react';
+import { FC, MouseEventHandler, ReactNode } from 'react';
 import clsx from 'clsx';
 
 export const OutlineButton: FC<{
@@ -10,6 +10,7 @@ export const OutlineButton: FC<{
   type?: 'button' | 'submit';
   onClick?: MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
+  children: ReactNode;
 }> = ({ color, className, onClick, children, type = 'button', size = 'auto', disabled = false, form = false, ...props }) => (
   <button
     className={clsx(
